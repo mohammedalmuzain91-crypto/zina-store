@@ -39,10 +39,10 @@
 
   <main>
     <section class="hero" id="hero">
-      <!-- Campaign video: add video/hero.mp4 (see README). Until then the poster image is shown. -->
-      <video id="heroVideo" muted loop playsinline preload="metadata" poster="images/hero-poster.webp"
+      <!-- Background campaign video -->
+      <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="images/p09.webp"
         aria-hidden="true">
-        <source src="video/video/hero.mp4" type="video/mp4">
+        <source src="video/hero.mp4" type="video/mp4">
       </video>
       <div class="shade"></div>
       <div class="hero-copy">
@@ -50,7 +50,8 @@
         <p>Watches, rings, necklaces and sneakers, chosen with care and ordered in a message.</p>
         <a class="btn" href="#collections">Discover the Collection</a>
       </div>
-      <p class="vph" id="vph" hidden>Video placeholder – add <b>video/hero.mp4</b> (see README)</p>
+      <p class="vph" id="vph" hidden>Background video could not play. Please check that video/hero.mp4 is uploaded with
+        the website.</p>
       <a class="scroll" href="#collections" aria-label="Scroll down"><span></span></a>
     </section>
 

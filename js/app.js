@@ -48,7 +48,7 @@
     }).join("");
     var lines = bag.map(function (i) { var p = find(i.id); return p ? "- " + i.qty + " x " + p.name + " (" + p.id + ")" : ""; }).join("\n");
     $("#bagOrder").href = wa("Hello ZinaStore, I'd like to order:\n" + lines);
-    try { localStorage.setItem("zs_bag", JSON.stringify(bag)); } catch (e) { }
+    try { localStorage.setItem("zs_bag", JSON.stringify(bag)); } catch (e) {}
   }
   function change(id, d) {
     var it = bag.filter(function (i) { return i.id === id; })[0];
@@ -73,7 +73,7 @@
   /* Hero video: plays if hero.mp4 exists; otherwise the poster stays and a placeholder label shows */
   var v = $("#heroVideo"), still = window.matchMedia("(prefers-reduced-motion: reduce)").matches || (navigator.connection && navigator.connection.saveData);
   v.querySelector("source").addEventListener("error", function () { $("#vph").hidden = false; });
-  if (!still) { var pr = v.play(); if (pr && pr.catch) pr.catch(function () { }); }
+  if (!still) { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); }
 
   /* Links and text */
   Array.prototype.forEach.call(document.querySelectorAll("[data-wa]"), function (a) { a.href = wa("Hello ZinaStore, I have a question about your products."); });
